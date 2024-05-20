@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from 'react';
@@ -9,7 +10,7 @@ export default function Home() {
   const [start, setStart] = useState(false);
 
   useEffect(() => {
-    getDailyHoroscope("foo", "bar").then(response => {
+    horoscopeAPI.getDailyHoroscope('Aquarius').then(response => {
       setHoroscope(response.data.horoscope_data);
     }).catch(error => {
       console.error("Error in fetch", error);
@@ -27,8 +28,18 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Hello World! This is a test!</h1>
-      <h2>{horoscope}</h2>
+      <h1>Horoscope</h1>
+      <span>{horoscope}</span>
+      <h1>Horoscope Daily</h1>
+      <span>{horoscopeDaily}</span>
+      <h1>APOD Image</h1>
+      <img src={ apodImage } alt="Foo"></img>
+      <h1>APOD Text</h1>
+      <span>{apod}</span>
+      <h1>APOD Dated Text</h1>
+      <h2>{apodDated}</h2>
+      <h1>APOD Dated Image</h1>
+      <img src={ apodDatedImage } alt="Foo"></img>
     </main>
   );
 }
