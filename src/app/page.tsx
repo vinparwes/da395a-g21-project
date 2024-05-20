@@ -4,7 +4,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import * as horoscopeAPI from './api/apiHoroscope'
-import * as nasaAPI from './api/apiNasa'
+import * as nasaAPI from './api/apiNASA'
+import * as openAiApi from './api/apiChatGPT'
 import StartScreen from './components/StartScreen/StartScreen';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
   const [apodDatedImage, setApodDatedImage] = useState('')
   const [gptPrompt, setGptPrompt] = useState('')
 
+  /*
   useEffect(() => {
     horoscopeAPI.getDailyHoroscope('Aquarius').then(response => {
       setHoroscope(response.data.horoscope_data);
@@ -51,17 +53,18 @@ export default function Home() {
       console.error("Error in fetch", error);
     })
   }, [])
-
-  /*
+  
   useEffect(() => {
-    getDailyHoroscope("foo").then(response => {
-      setHoroscope(response.data.horoscope_data);
+    openAiApi.getPrompt("Something on me being an Aquarius").then(response => {
+      setGptPrompt(response!!);
     }).catch(error => {
       console.error("Error in fetch", error);
     })
   }, [])
 
   */
+  
+ 
   if (!start) {
     return (
       <main>
@@ -85,6 +88,8 @@ export default function Home() {
       <h2>{apodDated}</h2>
       <h1>APOD Dated Image</h1>
       <img src={ apodDatedImage } alt="Foo"></img>
+      <h1>Gpt Prompt</h1>
+      <span>{ gptPrompt }</span>
     </main>
   );
 }
