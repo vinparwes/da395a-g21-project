@@ -1,6 +1,6 @@
 const prefix = "http://localhost:8080/api/horoscope/";
 
-export async function getDailyHoroscope(sign: String, day: String) {
+export async function getDailyHoroscope(sign: String) {
     const suffix = "daily?sign=" + sign
     const request = await fetch(prefix + suffix)
     return await request.json();
