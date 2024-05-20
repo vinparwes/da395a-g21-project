@@ -1,3 +1,6 @@
+import React from "react";
+import "./StartScreen.css"
+
 
 function StartScreen() {
   return (
