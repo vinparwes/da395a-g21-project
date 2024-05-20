@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { getDailyHoroscope } from './api/api';
+import { getDailyHoroscope } from './api/apiHoroscope';
 
 export default function Home() {
   const [horoscope, setHoroscope] = useState('');
