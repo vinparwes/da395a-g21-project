@@ -4,8 +4,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import * as horoscopeAPI from './api/apiHoroscope'
-import * as nasaAPI from './api/apiNASA'
-import * as openAiApi from './api/apiChatGPT'
+import * as nasaAPI from './api/apiNasa'
+import * as openAiApi from './api/apiOpenAi'
 import StartScreen from './components/StartScreen/StartScreen';
 
 export default function Home() {
