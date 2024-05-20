@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { getDailyHoroscope } from './api/api';
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { getDailyHoroscope } from './api/apiHoroscope';
 import StartScreen from './components/StartScreen/StartScreen';
-
 export default function Home() {
   const [horoscope, setHoroscope] = useState('');
   const [start, setStart] = useState(false);
