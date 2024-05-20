@@ -3,11 +3,20 @@
 
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { getDailyHoroscope } from './api/apiHoroscope';
+import * as horoscopeAPI from './api/apiHoroscope'
+import * as nasaAPI from './api/apiNasa'
 import StartScreen from './components/StartScreen/StartScreen';
+
 export default function Home() {
-  const [horoscope, setHoroscope] = useState('');
+  
   const [start, setStart] = useState(false);
+  const [horoscope, setHoroscope] = useState('')
+  const [horoscopeDaily, setHoroscopeDaily] = useState('')
+  const [apod, setApod] = useState('')
+  const [apodImage, setApodImage] = useState('')
+  const [apodDated, setApodDated] = useState('')
+  const [apodDatedImage, setApodDatedImage] = useState('')
+  const [gptPrompt, setGptPrompt] = useState('')
 
   useEffect(() => {
     horoscopeAPI.getDailyHoroscope('Aquarius').then(response => {
@@ -15,8 +24,44 @@ export default function Home() {
     }).catch(error => {
       console.error("Error in fetch", error);
     })
-  }, []);
+  }, [])
 
+  useEffect(() => {
+    horoscopeAPI.getDailyHoroscopeWithDay('Aquarius', "TOMORROW").then(response => {
+      setHoroscopeDaily(response.data.horoscope_data);
+    }).catch(error => {
+      console.error("Error in fetch", error);
+    })
+  }, [])
+
+  useEffect(() => {
+    nasaAPI.getApod().then(response => {
+      setApod(response.explanation);
+      setApodImage(response.url)
+    }).catch(error => {
+      console.error("Error in fetch", error);
+    })
+  }, [])
+
+  useEffect(() => {
+    nasaAPI.getApodWithDate("2024-01-01").then(response => {
+      setApodDated(response.explanation);
+      setApodDatedImage(response.url)
+    }).catch(error => {
+      console.error("Error in fetch", error);
+    })
+  }, [])
+
+  /*
+  useEffect(() => {
+    getDailyHoroscope("foo").then(response => {
+      setHoroscope(response.data.horoscope_data);
+    }).catch(error => {
+      console.error("Error in fetch", error);
+    })
+  }, [])
+
+  */
   if (!start) {
     return (
       <main>
