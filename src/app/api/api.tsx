@@ -1,21 +1,4 @@
-
-let foo = 'http://localhost:8080/api/horoscope/daily?sign=aquarius';
-function Api() {
-        function getDailyHoroscope() {
-                // Fetch data from our own proxyserver
-                const response = fetch("http://10.2.3.153:8080/api/horoscope/daily?sign=aquarius", {
-                }).then(response => response.json());
-                console.log(response);
-        }
-
-        getDailyHoroscope();
-
-
-    return (
-        <div>
-            <h1>API</h1>
-        </div>
-    );
+export async function getDailyHoroscope(sign: String, day: String) {
+    const request = await fetch("http://192.168.56.1:8080/api/horoscope/daily?sign=aquarius")
+    return await request.json();
 }
-
-export default Api;
