@@ -54,13 +54,13 @@ export default function Home() {
     })
   }, [])
   
-  useEffect(() => {
+  /*useEffect(() => {
     openAiApi.getPrompt("Something on me being an Aquarius").then(response => {
       setGptPrompt(response!!);
     }).catch(error => {
       console.error("Error in fetch", error);
     })
-  }, [])
+  }, [])*/
 
   
   

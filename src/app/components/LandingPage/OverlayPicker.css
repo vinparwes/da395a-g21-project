@@ -32,22 +32,27 @@ body {
   width: 50%;
   height: 50%;
   transform-origin: 100% 100%;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 
 }
 
 .starsign {
-  background-color: white;
-  border: none;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
-  width: 100px;
+  width: 30%;
+  height: 5%;
   text-align: center;
   z-index: 3;
+  pointer-events: auto;
+}
+
+.starsign:hover {
+  box-shadow: 0 0 10px 5px rgb(255, 255, 255);
 }
 
 .slice-1 {
@@ -88,40 +93,40 @@ body {
 }
 
 .slice-1 .starsign {
-  transform: rotate(0deg) translate(-30%, 340%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-2 .starsign {
-  transform: rotate(-30deg) translate(-60%, 250%);
+  transform: rotate(-43deg) translate(3%, -150%);
 }
 .slice-3 .starsign {
-  transform: rotate(-60deg) translate(-60%, 100%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-4 .starsign {
-  transform: rotate(-90deg) translate(-50%, 10%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-5 .starsign {
-  transform: rotate(-120deg) translate(-20%, 20%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-6 .starsign {
-  transform: rotate(-150deg) translate(-5%, 10%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-7 .starsign {
-  transform: rotate(-180deg) translate(40%, 20%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-8 .starsign {
-  transform: rotate(-210deg) translate(60%, 70%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-9 .starsign {
-  transform: rotate(-240deg) translate(70%, 150%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-10 .starsign {
-  transform: rotate(-270deg) translate(70%, 260%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-11 .starsign {
-  transform: rotate(-300deg) translate(30%, 340%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 .slice-12 .starsign {
-  transform: rotate(-330deg) translate(10%, 370%);
+  transform: rotate(-45deg) translate(3%, -150%);
 }
 
 /* Mobile */

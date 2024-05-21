@@ -12,7 +12,7 @@ function OverlayPicker() {
         <img src="/birth-chart.png" alt="Background Image" className="background-image" />
         {signs.map((sign, index) => (
           <div key={index} className={`slice slice-${index + 1}`}>
-            <button className="starsign">{sign}</button>           
+            <button className="starsign"></button>           
           </div>
         ))}
     </div>
