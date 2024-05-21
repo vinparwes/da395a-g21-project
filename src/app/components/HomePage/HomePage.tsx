@@ -1,8 +1,8 @@
-import ".HoroscopeToday.css";
+import ".HomePage.css";
 
 
 /* Main-funktion för rendrering av HoroscopeToday*/
-function HoroscopeToday() {
+function HomePage() {
     return (
       <div>
         <h1>Welcome to the app!</h1>
@@ -10,7 +10,7 @@ function HoroscopeToday() {
     );
   }
   
-  export default HoroscopeToday;
+  export default HomePage;
 
 /* Till stjärnona som glittrar */
 /*
@@ -36,4 +36,4 @@ function HoroscopeToday() {
                   </g>
                 </svg>
 
-/* 
+*/

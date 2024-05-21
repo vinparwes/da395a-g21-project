@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import * as horoscopeAPI from './api/apiHoroscope'
 import * as nasaAPI from './api/apiNasa'
 import * as openAiApi from './api/apiOpenAi'
-import StartScreen from './components/StartScreen/StartScreen';
+import StartScreen from './components/LandingPage/OverlayPicker';
 
 export default function Home() {
   
@@ -19,7 +19,7 @@ export default function Home() {
   const [apodDatedImage, setApodDatedImage] = useState('')
   const [gptPrompt, setGptPrompt] = useState('')
 
-  /*
+  
   useEffect(() => {
     horoscopeAPI.getDailyHoroscope('Aquarius').then(response => {
       setHoroscope(response.data.horoscope_data);
@@ -62,7 +62,7 @@ export default function Home() {
     })
   }, [])
 
-  */
+  
   
  
   if (!start) {

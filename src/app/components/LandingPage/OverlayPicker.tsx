@@ -1,7 +1,7 @@
 import React from "react";
-import "./StartScreen.css";
+import "./OverlayPicker.css";
 
-function StartScreen() {
+function OverlayPicker() {
   const signs = [
     "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", 
     "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"
@@ -12,11 +12,10 @@ function StartScreen() {
         <img src="/birth-chart.png" alt="Background Image" className="background-image" />
         {signs.map((sign, index) => (
           <div key={index} className={`slice slice-${index + 1}`}>
-            <button className="starsign">{sign}</button>
+            <button className="starsign">{sign}</button>           
           </div>
         ))}
     </div>
   );
 }
-
-export default StartScreen;
+export default OverlayPicker;

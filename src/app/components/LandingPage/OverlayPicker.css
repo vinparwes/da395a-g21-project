@@ -1,0 +1,138 @@
+body {
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  filter: drop-shadow(0px 0px 50px rgb(153, 152, 154));
+}
+.pie-chart {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slice {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: 100% 100%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.starsign {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  z-index: 3;
+}
+
+.slice-1 {
+  transform: rotate(15deg);
+}
+.slice-2 {
+  transform: rotate(45deg);
+}
+.slice-3 {
+  transform: rotate(75deg);
+}
+.slice-4 {
+  transform: rotate(105deg);
+}
+.slice-5 {
+  transform: rotate(135deg);
+}
+.slice-6 {
+  transform: rotate(165deg);
+}
+.slice-7 {
+  transform: rotate(195deg);
+}
+.slice-8 {
+  transform: rotate(225deg);
+}
+.slice-9 {
+  transform: rotate(255deg);
+}
+.slice-10 {
+  transform: rotate(285deg);
+}
+.slice-11 {
+  transform: rotate(315deg);
+}
+.slice-12 {
+  transform: rotate(345deg);
+}
+
+.slice-1 .starsign {
+  transform: rotate(0deg) translate(-30%, 340%);
+}
+.slice-2 .starsign {
+  transform: rotate(-30deg) translate(-60%, 250%);
+}
+.slice-3 .starsign {
+  transform: rotate(-60deg) translate(-60%, 100%);
+}
+.slice-4 .starsign {
+  transform: rotate(-90deg) translate(-50%, 10%);
+}
+.slice-5 .starsign {
+  transform: rotate(-120deg) translate(-20%, 20%);
+}
+.slice-6 .starsign {
+  transform: rotate(-150deg) translate(-5%, 10%);
+}
+.slice-7 .starsign {
+  transform: rotate(-180deg) translate(40%, 20%);
+}
+.slice-8 .starsign {
+  transform: rotate(-210deg) translate(60%, 70%);
+}
+.slice-9 .starsign {
+  transform: rotate(-240deg) translate(70%, 150%);
+}
+.slice-10 .starsign {
+  transform: rotate(-270deg) translate(70%, 260%);
+}
+.slice-11 .starsign {
+  transform: rotate(-300deg) translate(30%, 340%);
+}
+.slice-12 .starsign {
+  transform: rotate(-330deg) translate(10%, 370%);
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .pie-chart {
+    width: 100%;
+    height: auto;
+  }
+
+  .background-image {
+    width: 100%;
+    height: auto;
+  }
+}
