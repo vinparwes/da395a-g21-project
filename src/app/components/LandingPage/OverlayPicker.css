@@ -1,4 +1,14 @@
-
+.stagger-text-container {
+  position: absolute;
+  top: 100px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5; /* Higher z-index to ensure it's above other elements */
+  width: 100%;
+  text-align: center;
+  color: #fff; /* Adjust color as needed */
+  pointer-events: none; /* So it doesn't block interaction with underlying elements */
+}
 .pie-chart {
   position: relative;
   width: 100vh;
@@ -6,6 +16,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
+  top: 100px;
 }
 
 .background-image {

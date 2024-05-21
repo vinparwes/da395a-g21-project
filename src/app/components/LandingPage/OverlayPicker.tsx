@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import "./OverlayPicker.css";
 import React from "react";
+import StaggerText from "react-stagger-text";
 
 
 interface OverlayPickerProps {
@@ -22,13 +23,21 @@ export default function OverlayPicker({ setOpenModal } : OverlayPickerProps ) {
   }
 
   return (
-    <div className="pie-chart">
-      <img src="/birth-chart.png" alt="Background Image" className="background-image" />
-      {signs.map((sign, index) => (
-        <div key={index} className={`slice slice-${index + 1}`}>
-          <button onClick={() => {handleClick(sign)}} className="starsign">{sign}</button>
-        </div>
-      ))}
-    </div>
+  <><div className="stagger-text-container">
+      <StaggerText
+        staggerType="letter"
+        staggerDuration={0.4}
+        startDelay={0.4}>
+        This text will be staggered by word
+      </StaggerText>
+    </div><div className="pie-chart">
+        <img src="/birth-chart.png" alt="Background Image" className="background-image" />
+        {signs.map((sign, index) => (
+          <div key={index} className={`slice slice-${index + 1}`}>
+            <button onClick={() => { handleClick(sign); } } className="starsign">{sign}</button>
+          </div>
+        ))}
+
+      </div></>
   );
 }
