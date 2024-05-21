@@ -12,9 +12,8 @@ function HomePage() {
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => {
     setOpenModal(!openModal)
-    console.log("IS OPEN MODAL TRUE? ", openModal)
   }
-  
+
 
   if (!openModal) {
     return (
@@ -25,7 +24,7 @@ function HomePage() {
   }
   return (
     <>
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto px-5">
         <NavHeader setOpenModal={toggleModal} />
         <Content />
         <NavFooter />
