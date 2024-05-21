@@ -7,12 +7,12 @@ import { Card } from "flowbite-react"
 import * as horoscopeAPI from "@/app/api/apiHoroscope"
 
 function AstroView() {
+    let sign = localStorage.getItem("selectedStarSign")
     const [horoscope, setHoroscope] = useState('')
     const [horoscopeFuture, setFutureHoroscope] = useState('')
     const [horoscopeWeekly, setHoroscopeWeekly] = useState('')
     const [horoscopeMonthly, setHoroscopeMonthly] = useState('')
-    const [heading, setHeading] = useState("Todays Horoscope...")
-    let sign = localStorage.getItem("selectedStarSign")
+    const [heading, setHeading] = useState(`Todays Horoscope, ${sign}...`)
 
     useEffect(() => {
         horoscopeAPI.getDailyHoroscope(sign!!).then(response => {
@@ -46,7 +46,6 @@ function AstroView() {
         })
     }, [sign])
 
-
     return (
         <>
             <Card href="#" className="my-4">
@@ -58,7 +57,7 @@ function AstroView() {
                 </p>
                 <Button onClick={ () => {
                     setHoroscope(horoscopeFuture)
-                    setHeading("Tomorrows Horoscope...")
+                    setHeading(`Here is tomorrows horoscope, ${sign}...`)
                 }}>See the Future...</Button>
             </Card>
 
