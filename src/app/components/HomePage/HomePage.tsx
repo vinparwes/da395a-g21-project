@@ -1,16 +1,19 @@
-import ".HomePage.css";
+import Header from "../Containers/Header/Header";
+import Footer from "../Containers/Footer/Footer";
+import Body from "../Containers/Body/Body";
+import "./HomePage.css";
 
-
-/* Main-funktion för rendrering av HoroscopeToday*/
 function HomePage() {
-    return (
-      <div>
-        <h1>Welcome to the app!</h1>
-      </div>
-    );
-  }
-  
-  export default HomePage;
+  return (
+    <>
+      <Header/>
+      <Body />
+      <Footer />
+    </>
+  );
+}
+
+export default HomePage;
 
 /* Till stjärnona som glittrar */
 /*
