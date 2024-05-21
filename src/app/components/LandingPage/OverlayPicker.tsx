@@ -2,28 +2,33 @@
 import "./OverlayPicker.css";
 import React from "react";
 
-export default function OverlayPicker() {
-  const signs = [
-    "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", 
-    "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius"
-  ];
+
+interface OverlayPickerProps {
+  setOpenModal: () => void;
+}
+
+const signs = [
+  "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo",
+  "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius"
+];
+
+export default function OverlayPicker({ setOpenModal } : OverlayPickerProps ) {
 
   function handleClick(sign: string) {
-    console.log("You clicked on" + sign); 
-    localStorage.setItem("selectedStarsign", sign);
+    localStorage.setItem("selectedStarSign", sign);
+    setOpenModal()
+    console.log("Item in storage: " + localStorage.getItem("selectedStarSign"));
 
   }
 
-
-
   return (
-      <div className="pie-chart">
-          <img src="/birth-chart.png" alt="Background Image" className="background-image" />
-          {signs.map((sign, index) => (
-            <div key={index} className={`slice slice-${index + 1}`}>
-              <button onClick={() => handleClick(sign)} className="starsign">{sign}</button>           
-            </div>
-          ))}
-      </div>
+    <div className="pie-chart">
+      <img src="/birth-chart.png" alt="Background Image" className="background-image" />
+      {signs.map((sign, index) => (
+        <div key={index} className={`slice slice-${index + 1}`}>
+          <button onClick={() => {handleClick(sign)}} className="starsign">{sign}</button>
+        </div>
+      ))}
+    </div>
   );
 }

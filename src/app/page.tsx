@@ -8,19 +8,19 @@ import * as nasaAPI from './api/apiNasa'
 import * as openAiApi from './api/apiOpenAi'
 import StartScreen from './components/LandingPage/OverlayPicker';
 import HomePage from './components/HomePage/HomePage';
+import OverlayPicker from './components/LandingPage/OverlayPicker';
 
 export default function Home() {
   
   const [start, setStart] = useState(false);
-  const [horoscope, setHoroscope] = useState('')
-  const [horoscopeDaily, setHoroscopeDaily] = useState('')
+
   const [apod, setApod] = useState('')
   const [apodImage, setApodImage] = useState('')
   const [apodDated, setApodDated] = useState('')
   const [apodDatedImage, setApodDatedImage] = useState('')
   const [gptPrompt, setGptPrompt] = useState('')
 
-  
+  /*
   useEffect(() => {
     horoscopeAPI.getDailyHoroscope('Aquarius').then(response => {
       setHoroscope(response.data.horoscope_data);
@@ -63,17 +63,6 @@ export default function Home() {
     })
   }, [])*/
 
-  
-  
- 
-  if (!start) {
-    return (
-      <main>
-        <StartScreen />
-        <button onClick={() => setStart(true)}>Start</button>
-      </main>
-    );
-  }
 
   return (
     <main>

@@ -1,17 +1,40 @@
-import Header from "../Containers/Header/Header";
-import Footer from "../Containers/Footer/Footer";
-import Body from "../Containers/Body/Body";
+
 import "./HomePage.css";
+import NavHeader from "../Containers/NavHeader/NavHeader";
+import NavFooter from "../Containers/NavFooter/NavFooter";
+
+import { Button, Modal } from "flowbite-react";
+import { useState } from "react";
+import Content from "../Content/Content";
+import OverlayPicker from "../LandingPage/OverlayPicker";
 
 function HomePage() {
+  const [openModal, setOpenModal] = useState(false);
+  const toggleModal = () => {
+    setOpenModal(!openModal)
+    console.log("IS OPEN MODAL TRUE? ", openModal)
+  }
+  
+
+  if (!openModal) {
+    return (
+      <main>
+        <OverlayPicker setOpenModal={toggleModal} />
+      </main>
+    );
+  }
   return (
     <>
-      <Header/>
-      <Body />
-      <Footer />
+      <div className="container mx-auto px-20">
+        <NavHeader setOpenModal={toggleModal} />
+        <Content />
+        <NavFooter />
+      </div>
     </>
   );
 }
+
+
 
 export default HomePage;
 
