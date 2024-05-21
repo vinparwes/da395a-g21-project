@@ -7,6 +7,7 @@ import * as horoscopeAPI from './api/apiHoroscope'
 import * as nasaAPI from './api/apiNasa'
 import * as openAiApi from './api/apiOpenAi'
 import StartScreen from './components/LandingPage/OverlayPicker';
+import HomePage from './components/HomePage/HomePage';
 
 export default function Home() {
   
@@ -76,20 +77,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Horoscope</h1>
-      <span>{horoscope}</span>
-      <h1>Horoscope Daily</h1>
-      <span>{horoscopeDaily}</span>
-      <h1>APOD Image</h1>
-      <img src={ apodImage } alt="Foo"></img>
-      <h1>APOD Text</h1>
-      <span>{apod}</span>
-      <h1>APOD Dated Text</h1>
-      <h2>{apodDated}</h2>
-      <h1>APOD Dated Image</h1>
-      <img src={ apodDatedImage } alt="Foo"></img>
-      <h1>Gpt Prompt</h1>
-      <span>{ gptPrompt }</span>
+      <HomePage></HomePage>
     </main>
   );
 }
