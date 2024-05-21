@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import "./OverlayPicker.css";
+import React from "react";
 
 export default function OverlayPicker() {
   const signs = [
@@ -13,17 +13,17 @@ export default function OverlayPicker() {
     localStorage.setItem("selectedStarsign", sign);
 
   }
-  
+
+
 
   return (
-    <div className="pie-chart">
-        <img src="/birth-chart.png" alt="Background Image" className="background-image" />
-        {signs.map((sign, index) => (
-          <div key={index} className={`slice slice-${index + 1}`}>
-            <button onClick={() => handleClick(sign)} className="starsign">{sign}</button>           
-          </div>
-        ))}
-    </div>
+      <div className="pie-chart">
+          <img src="/birth-chart.png" alt="Background Image" className="background-image" />
+          {signs.map((sign, index) => (
+            <div key={index} className={`slice slice-${index + 1}`}>
+              <button onClick={() => handleClick(sign)} className="starsign">{sign}</button>           
+            </div>
+          ))}
+      </div>
   );
 }
-
