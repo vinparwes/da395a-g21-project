@@ -12,13 +12,11 @@ const signs = [
   "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius"
 ];
 
-export default function OverlayPicker({ setOpenModal } : OverlayPickerProps ) {
+export default function OverlayPicker({ setOpenModal: toggleModal } : OverlayPickerProps ) {
 
   function handleClick(sign: string) {
     localStorage.setItem("selectedStarSign", sign);
-    setOpenModal()
-    console.log("Item in storage: " + localStorage.getItem("selectedStarSign"));
-
+    toggleModal()
   }
 
   return (
