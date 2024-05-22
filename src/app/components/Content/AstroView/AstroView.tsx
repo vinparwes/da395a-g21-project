@@ -5,18 +5,22 @@ import { useEffect } from "react"
 import { Accordion } from "flowbite-react"
 import { Card } from "flowbite-react"
 import StaggerText from "react-stagger-text"
-
+import zodiacSigns from "@/app/starSignIcons"
 import * as horoscopeAPI from "@/app/api/apiHoroscope"
 import { getPrompt } from "@/app/api/apiOpenAi"
 
 function AstroView() {
+    type ZodiacSignKey = keyof typeof zodiacSigns;
     let sign = localStorage.getItem("selectedStarSign")
     const [horoscope, setHoroscope] = useState('')
     const [horoscopeFuture, setFutureHoroscope] = useState('')
     const [horoscopeWeekly, setHoroscopeWeekly] = useState('')
     const [horoscopeMonthly, setHoroscopeMonthly] = useState('')
     const [seerInformation, setSeerInformation] = useState('')
-    const [heading, setHeading] = useState(`Todays Horoscope for ${sign}...`)
+    
+    const [heading, setHeading] = useState(`Todays Horoscope for ${<span role="img" aria-label="foo">
+        zodiacSigns[sign as ZodiacSignKey].Entity
+    </span>} ${sign}...`)
 
     useEffect(() => {
         horoscopeAPI.getDailyHoroscope(sign!!).then(response => {
