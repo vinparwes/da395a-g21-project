@@ -22,12 +22,12 @@ export default function OverlayPicker({ setOpenModal: toggleModal }: OverlayPick
 
   return (
     <>
-      <div >
+      <div id="wheel-container">
         <div className="stagger-text-container">
           <StaggerText
             staggerType="letter"
-            staggerDuration={0.4}
-            startDelay={0.4}>
+            staggerDuration={0.9}
+            startDelay={0.6}>
             Choose your Sign...
           </StaggerText>
         </div><div className="pie-chart">

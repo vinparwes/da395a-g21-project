@@ -6,7 +6,7 @@ import NavFooter from "../Containers/NavFooter/NavFooter";
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import Content from "../Content/Content";
-import OverlayPicker from "../LandingPage/OverlayPicker";
+import OverlayPicker from "../OverlayPicker/OverlayPicker";
 
 function HomePage() {
   const [openModal, setOpenModal] = useState(false);
