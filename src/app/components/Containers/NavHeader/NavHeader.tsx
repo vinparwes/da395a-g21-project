@@ -5,7 +5,6 @@ import './NavHeader.css'
 import Link from "next/link";
 import { Navbar } from "flowbite-react";
 import { Button } from 'flowbite-react';
-import { MouseEventHandler } from 'react';
 
 interface NavHeaderProps {
     setOpenModal: () => void;
