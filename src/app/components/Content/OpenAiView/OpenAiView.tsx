@@ -62,7 +62,7 @@ function OpenAiView() {
                     <div className="mb-2 ">
                         <Label htmlFor="medium" value="Send a message to the beyond..." className="text-2xl font-bold tracking-tight text-white dark:text-white" />
                     </div>
-                    <form className="flex" onSubmit={handleSubmit}>
+                    <form id="mobile-form" className="flex" onSubmit={handleSubmit}>
                         <TextInput
                             id="large"
                             type="text"
