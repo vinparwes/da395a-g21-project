@@ -27,10 +27,12 @@ export default function Home() {
       fpsLimit: 60,
       interactivity: {
         events: {
-          //onClick: {
-          //  enable: true,
-          //  mode: "push",
-          //},
+          onClick: {
+            enable: true,
+            mode: "push",
+            
+          },
+
         },
         modes: {
           push: {
@@ -60,7 +62,7 @@ export default function Home() {
           density: {
             enable: true,
           },
-          value: 2000,
+          value: 2500,
         },
         opacity: {
           value: { min: 0.5, max: 1 },
