@@ -11,13 +11,7 @@ export default function Home() {
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -41,7 +35,6 @@ export default function Home() {
           //  enable: true,
           //  mode: "push",
           //},
-
         },
         modes: {
           push: {
@@ -64,17 +57,17 @@ export default function Home() {
             default: OutMode.out,
           },
           random: false,
-          speed: 1,
+          speed: 0.05,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 200,
+          value: 2000,
         },
         opacity: {
-          value: {min: 0.5, max: 1},
+          value: { min: 0.5, max: 1 },
         },
         shape: {
           type: "circle",
