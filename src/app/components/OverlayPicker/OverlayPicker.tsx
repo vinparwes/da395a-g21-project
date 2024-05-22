@@ -26,12 +26,13 @@ export default function OverlayPicker({ setOpenModal: toggleModal }: OverlayPick
           <StaggerText staggerType="letter" staggerDuration={0.9} startDelay={0.6}>
             Choose your Sign...
           </StaggerText>
-          <div id="mobile-overlay-picker">
+
+        </div>
+        <div id="mobile-overlay-picker">
         {signs.map((sign, index) => (
           <button key={index} onClick={() => handleClick(sign)} className="starsign">{sign}</button>
         ))}
       </div>
-        </div>
         <div className="pie-chart">
           <img src="/birth-chart.png" alt="Background Image" className="background-image" />
           {signs.map((sign, index) => (

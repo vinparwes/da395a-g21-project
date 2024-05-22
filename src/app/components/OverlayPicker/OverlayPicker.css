@@ -158,15 +158,29 @@
     display: none;
   }
 
-
   #mobile-overlay-picker {
-    display: block;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(6, auto); /* 6 rows */
+    gap: 15px;
+    padding: 10px;
     height: 100vh;
+    box-sizing: border-box;
+    justify-items: center;
   }
 
   .starsign {
-    color:white;
+    color: white;
     font-size: small;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
+  .stagger-text-container {
+    font-size: large;
   }
 }
