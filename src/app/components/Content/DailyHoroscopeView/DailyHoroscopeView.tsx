@@ -13,9 +13,7 @@ function DailyHoroscopeView() {
     const [horoscope, setHoroscope] = useState('')
     const [horoscopeFuture, setFutureHoroscope] = useState('')
     const [futureButtonHeading, setFutureButtonHeading] = useState("See the future...")
-    const [heading, setHeading] = useState(`Todays Horoscope for ${<span role="img" aria-label="foo">
-        zodiacSigns[sign as ZodiacSignKey].Entity
-    </span>} ${sign}...`)
+    const [heading, setHeading] = useState(`Todays Horoscope for the ${sign}...`)
 
     useEffect(() => {
         if (localStorage.getItem("dailyHoroscope") == null) {
