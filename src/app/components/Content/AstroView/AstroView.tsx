@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import { Accordion } from "flowbite-react"
 import { Card } from "flowbite-react"
 import StaggerText from "react-stagger-text"
-import zodiacSigns from "@/app/starSignIcons"
+import zodiacSigns from "../../Data/StarSignIcons"
 import * as horoscopeAPI from "@/app/api/apiHoroscope"
 import { getPrompt } from "@/app/api/apiOpenAi"
 
