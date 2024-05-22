@@ -3,7 +3,6 @@ import "./OverlayPicker.css";
 import React from "react";
 import StaggerText from "react-stagger-text";
 
-
 interface OverlayPickerProps {
   setOpenModal: () => void;
 }
@@ -17,27 +16,29 @@ export default function OverlayPicker({ setOpenModal: toggleModal }: OverlayPick
 
   function handleClick(sign: string) {
     localStorage.setItem("selectedStarSign", sign);
-    toggleModal()
+    toggleModal();
   }
 
   return (
     <>
       <div id="wheel-container">
         <div className="stagger-text-container">
-          <StaggerText
-            staggerType="letter"
-            staggerDuration={0.9}
-            startDelay={0.6}>
+          <StaggerText staggerType="letter" staggerDuration={0.9} startDelay={0.6}>
             Choose your Sign...
           </StaggerText>
-        </div><div className="pie-chart">
+          <div id="mobile-overlay-picker">
+        {signs.map((sign, index) => (
+          <button key={index} onClick={() => handleClick(sign)} className="starsign">{sign}</button>
+        ))}
+      </div>
+        </div>
+        <div className="pie-chart">
           <img src="/birth-chart.png" alt="Background Image" className="background-image" />
           {signs.map((sign, index) => (
             <div key={index} className={`slice slice-${index + 1}`}>
-              <button onClick={() => { handleClick(sign); }} className="starsign">{sign}</button>
+              <button onClick={() => handleClick(sign)} className="starsign">{sign}</button>
             </div>
           ))}
-
         </div>
       </div>
     </>

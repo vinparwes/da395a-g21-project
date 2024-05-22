@@ -147,15 +147,26 @@
   transform: rotate(-45deg) translate(3%, -150%);
 }
 
+#mobile-overlay-picker {
+  display: none;
+
+}
+
 /* Mobile */
 @media only screen and (max-width: 600px) {
   .pie-chart {
-    width: 100%;
-    height: auto;
+    display: none;
   }
 
-  .background-image {
-    width: 100%;
-    height: auto;
+
+  #mobile-overlay-picker {
+    display: block;
+    height: 100vh;
+  }
+
+  .starsign {
+    color:white;
+    font-size: small;
+
   }
 }

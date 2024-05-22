@@ -10,7 +10,7 @@ export function NavFooter() {
 
   return (
     <Footer container className='my-4 position: relative bg-black border-2 border-white'>
-      <Footer.Copyright href="#" className='text-white' by="Astra" year={2024} />
+      <Footer.Copyright href="#" className='text-white' by="HorosCope" year={2024} />
       <Footer.LinkGroup>
         <Footer.Link href="#" onClick={() => {
           setOpenModal(true)
