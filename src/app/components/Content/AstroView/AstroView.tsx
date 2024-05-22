@@ -60,11 +60,11 @@ function AstroView() {
     */
     return (
         <>
-            <Accordion flush={true}>
+            <Accordion className="position: relative">
                 <Accordion.Panel isOpen={true}>
                     <Accordion.Title>{heading}</Accordion.Title>
                     <Accordion.Content>
-                        <p className="mb-2 text-gray-500 dark:text-gray-400">
+                        <p className="mb-2 text-white dark:text-gray-400">
                             <StaggerText
                                 staggerType="letter"
                                 staggerDuration={0.1}

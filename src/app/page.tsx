@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
+import './globals.css';
 import React, { useState, useEffect, useMemo } from 'react';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import HomePage from './components/HomePage/HomePage';
@@ -16,10 +16,6 @@ export default function Home() {
       setInit(true);
     });
   }, []);
-
-  const particlesLoaded = (container?: Container) => {
-    console.log(container);
-  };
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -57,7 +53,7 @@ export default function Home() {
             default: OutMode.out,
           },
           random: false,
-          speed: 0.05,
+          speed: 0.1,
           straight: false,
         },
         number: {
@@ -73,7 +69,7 @@ export default function Home() {
           type: "circle",
         },
         size: {
-          value: { min: 0.5, max: 1 },
+          value: { min: 0.1, max: 1.5 },
         },
       },
       detectRetina: true,

@@ -6,7 +6,7 @@ import { Footer } from "flowbite-react";
 
 export function NavFooter() {
   return (
-    <Footer container className='my-4'>
+    <Footer container className='my-4 position: relative'>
       <Footer.Copyright href="#" by="Astra" year={2024} />
       <Footer.LinkGroup>
         <Footer.Link href="#">About</Footer.Link>

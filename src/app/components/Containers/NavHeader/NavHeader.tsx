@@ -12,7 +12,7 @@ interface NavHeaderProps {
 
 export function NavHeader( { setOpenModal } : NavHeaderProps) {
     return (
-        <Navbar fluid rounded className='my-4'>
+        <Navbar fluid rounded className='my-4 position: relative'>
             <Navbar.Brand as={Link} href="https://flowbite-react.com">
                 <img src="/fav-icon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Astro World</span>

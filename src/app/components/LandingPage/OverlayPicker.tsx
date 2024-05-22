@@ -21,21 +21,25 @@ export default function OverlayPicker({ setOpenModal: toggleModal }: OverlayPick
   }
 
   return (
-    <><div className="stagger-text-container">
-      <StaggerText
-        staggerType="letter"
-        staggerDuration={0.4}
-        startDelay={0.4}>
-        Choose your Sign...
-      </StaggerText>
-    </div><div className="pie-chart">
-        <img src="/birth-chart.png" alt="Background Image" className="background-image" />
-        {signs.map((sign, index) => (
-          <div key={index} className={`slice slice-${index + 1}`}>
-            <button onClick={() => { handleClick(sign); }} className="starsign">{sign}</button>
-          </div>
-        ))}
+    <>
+      <div >
+        <div className="stagger-text-container">
+          <StaggerText
+            staggerType="letter"
+            staggerDuration={0.4}
+            startDelay={0.4}>
+            Choose your Sign...
+          </StaggerText>
+        </div><div className="pie-chart">
+          <img src="/birth-chart.png" alt="Background Image" className="background-image" />
+          {signs.map((sign, index) => (
+            <div key={index} className={`slice slice-${index + 1}`}>
+              <button onClick={() => { handleClick(sign); }} className="starsign">{sign}</button>
+            </div>
+          ))}
 
-      </div></>
+        </div>
+      </div>
+    </>
   );
 }
