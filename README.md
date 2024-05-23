@@ -28,4 +28,5 @@ bun dev
 
 # VIKTIGT
 
-Projektet är beroende av en Proxy Server kodad i Spring. Denna måste köra samtidigt för att applikationen ska bete sig korrekt. 
+Projektet är beroende av en Proxy Server kodad i Spring. Denna måste köra samtidigt för att applikationen ska bete sig korrekt. Länken till detta repo finnes via
+denna länk; [https://github.com/patriknotvincent/ProxyServer.git](https://github.com/patriknotvincent/ProxyServer.git)
