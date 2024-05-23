@@ -5,6 +5,7 @@ import WeeklyHoroscopeView from "./WeeklyHoroscopeView/WeeklyHoroscopeView"
 import MonthlyHoroscopeView from "./MonthlyHoroscopeView/MonthlyHoroscopeView"
 import OpenAiView from "./OpenAiView/OpenAiView"
 
+
 function Content() {
     return (
         <>
