@@ -10,6 +10,8 @@ Projektet tillämpar tre API:er:
 
 Projektet tillämpar localStorage genom att spara användarens val av stjärntecken i minne. Om stjärntecknet finns laddas sidan utan "hjulet".
 
+Till sist är projektet beroende av nycklar till alla olika API:er. Dessa finns till förfogande vid förfrågan
+
 ## Kom igång
 
 Först måste dev-servern köras
