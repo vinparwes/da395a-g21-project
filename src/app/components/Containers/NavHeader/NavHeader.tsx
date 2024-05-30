@@ -8,7 +8,7 @@ import NasaView from "../../Content/NasaView/NasaView";
 import { useState } from "react";
 
 import { useEffect } from "react"
-import { getApod } from "@/app/api/apiNasa";
+import { getApod } from "@/app/api/apiNASA";
 
 
 interface NavHeaderProps {
