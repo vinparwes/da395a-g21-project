@@ -2,19 +2,17 @@
 import "./HomePage.css";
 import NavHeader from "../Containers/NavHeader/NavHeader";
 import NavFooter from "../Containers/NavFooter/NavFooter";
-
-import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import Content from "../Content/Content";
 import OverlayPicker from "../OverlayPicker/OverlayPicker";
 
 function HomePage() {
-  const [openModal, setOpenModal] = useState(false);
+  let sign = localStorage.getItem('selectedStarSign')
+  const [openModal, setOpenModal] = useState(sign != null);
   const toggleModal = () => {
     setOpenModal(!openModal)
   }
-
-
+  console.log("SIGN FOUND: ", sign)
   if (!openModal) {
     return (
       <main>

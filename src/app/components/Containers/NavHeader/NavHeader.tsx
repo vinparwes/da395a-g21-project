@@ -60,7 +60,7 @@ export function NavHeader({ setOpenModal }: NavHeaderProps) {
                     onClick={() => setOpenNasaModal(true)}
                     gradientDuoTone={"purpleToBlue"}
                 >
-                    Fetch NASA Data
+                    Astrology Picture of the Day
                 </Button>
             </Navbar.Collapse>
             <Modal
