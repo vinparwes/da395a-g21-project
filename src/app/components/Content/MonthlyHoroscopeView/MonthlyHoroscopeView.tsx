@@ -17,7 +17,7 @@ function MonthlyHoroscopeView() {
         horoscopeAPI.getMonthlyHoroscope(sign!!).then(response => {
             setHoroscopeMonthly(response.data.horoscope_data);
         }).catch(error => {
-            console.error("Error in fetch", error);
+            setHoroscopeMonthly(':(')
         })
     }, [sign])
 

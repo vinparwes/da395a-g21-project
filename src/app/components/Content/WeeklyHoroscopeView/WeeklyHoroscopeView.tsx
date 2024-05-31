@@ -18,7 +18,7 @@ function WeeklyHoroscopeView() {
         horoscopeAPI.getWeeklyHoroscope(sign!!).then(response => {
             setHoroscopeWeekly(response.data.horoscope_data);
         }).catch(error => {
-            console.error("Error in fetch", error);
+            setHoroscopeWeekly(':(');
         })
     }, [sign])
 

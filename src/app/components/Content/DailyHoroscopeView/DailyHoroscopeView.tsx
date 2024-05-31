@@ -20,7 +20,7 @@ function DailyHoroscopeView() {
             horoscopeAPI.getDailyHoroscope(sign!!).then(response => {
                 setHoroscope(response.data.horoscope_data);
             }).catch(error => {
-                console.error("Error in fetch", error);
+                setHoroscope(':(')
             })
         } else {
             setHoroscope(localStorage.getItem("dailyHoroscope")!!)
