@@ -12,23 +12,35 @@ Projektet tillämpar localStorage genom att spara användarens val av stjärntec
 
 Till sist är projektet beroende av nycklar till alla olika API:er. Dessa finns till förfogande vid förfrågan
 
+## Krav för att kunna köra hela applikationen (inkl proxy-server nämnd nedan)
+
+- NPM 
+- IntelliJ Idea (Community Edition fungerar utmärkt)
+- Java (Version 17 med openjdk-22)
+
 ## Kom igång
 
-Först måste dev-servern köras
+1) Klona projektet
 
+2) Öppna projektet i din valda kod-editerare (VS Code rekommenderat)
+
+3) Öppna en ny terminal. Ange;
+```bash
+npm install
+```` 
+Och tryck enter.
+
+4) I samma terminal kan du nu köra en utvecklings-server genom att ange
 ```bash
 npm run dev
-# or
+# eller
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+````
+Och sedan trycka enter.
 
-Öppna [http://localhost:3000](http://localhost:3000) med din webbläsare för att se appen
+Följ därefter instruktionerna från terminalen för att navigera till hemsidan. I vårt fall lades hemsidan på [http://localhost:3000](http://localhost:3000), men detta kan variera beroende på vad du har igång på din lokala maskin.
 
 # VIKTIGT
 
-Projektet är beroende av en Proxy Server kodad i Spring. Denna måste köra samtidigt för att applikationen ska bete sig korrekt. Länken till detta repo finnes via
+Projektet är beroende av en Proxy Server kodad i Spring. Denna måste köras för att appen ska kunna hämta horoskop, men det är fullt möjligt att köra klienten utan servern igång. Länken till detta repo finnes via
 denna länk; [https://github.com/patriknotvincent/ProxyServer.git](https://github.com/patriknotvincent/ProxyServer.git)
