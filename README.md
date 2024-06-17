@@ -30,7 +30,13 @@ npm install
 ```` 
 Och tryck enter.
 
-4) I samma terminal kan du nu köra en utvecklings-server genom att ange
+4) I projektets rot (utanför src, public och dylikt), skapa en fil som enbart heter
+```bash
+.env
+```
+I denna fil, klistra in information delgiven av administratören. Dessa är API-nycklar och dylikt som används under körtid.
+
+5) I samma terminal kan du nu köra en utvecklings-server genom att ange
 ```bash
 npm run dev
 # eller
